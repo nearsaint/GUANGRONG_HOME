@@ -1,0 +1,97 @@
+@charset 'UTF-8';
+/*
+ * name: 'footer.scss';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1207';
+ */
+@import 'base_scss';
+
+footer.footer{
+  background: #333;
+  color: #fff;
+  width: 100%;
+  display: block;
+  padding: 40px 0 42px;
+  min-height: 300px;
+  position: relative;
+  div.container{
+    position: relative;
+  }
+  .logo{
+    @include square(60px,300px);
+    @include background-image(url(../image/logo/logo-w@3x.png),$position: left center);
+  }//logo
+  nav.nav_footer{
+    @include flex;
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: calc(100% - 200px);
+    padding: 40px 0;
+    ul{
+      margin-right: 60px;
+      h4{
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      >li{
+        margin-top: 5px;
+        a{
+          color: #999;
+          font-size: 14px;
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+    }//ul
+  }//nav
+  .qrcode{
+    @include position($right: 15px,$top: 100px);
+    @include square(auto, 140px);
+    text-align: center;
+    i{
+      display: block;
+      @include background-image;
+      @include square(140px, 140px);
+      margin-bottom: 10px;
+    }
+    img{
+      display: block;
+      @include square(140px, 140px);
+      margin-bottom: 10px;
+    }
+    span{
+      font-size: 12px;
+    }
+  }//qrcode
+  .copyright{
+    background: #000;
+    @include square(42px, 100%);
+    line-height: 42px;
+    font-size: 12px;
+    color: #999;
+    @include position($bottom:0, $left: 0);
+    z-index: 1;
+    >div{
+      @include text-overflow;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer.footer{
+    .qrcode{
+      @include position($right: 50%,$top: 0);
+      @include square(auto, 160px);
+      margin-right: -80px;
+      i,img{
+        display: block;
+        @include square(160px, 160px);
+      }
+      span{
+        font-size: 14px;
+      }
+    }
+  }
+}

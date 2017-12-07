@@ -1,0 +1,60 @@
+@charset 'UTF-8'; //@import baseLess.less
+@color_main: #00b7ee;
+@color_light: #57c7f3;
+@color_deep: #0061ae;
+
+.MIXIN_radius(@radius:10px) {
+  border-radius: @radius;
+}
+
+.MIXIN_background-image(@url:null, @size:contain, @position:center, @repeat:no-repeat) {
+  background-image: @url;
+  background-size: @size;
+  background-position: @position;
+  background-repeat: @repeat;
+}
+
+.MIXIN_transition(@transition) {
+  transition+: @transition;
+}
+
+.MIXIN_opacity(@opacity) {
+  opacity: @opacity/100;
+  filter:alpha(opacity=@opacity);
+}
+
+.MIXIN_mask(@position:absolute, @top:0, @right:0, @bottom:auto, @left:0, @width:100%, @height:100%) {
+  position: @position;
+  top: @top;
+  right: @right;
+  left: @left;
+  bottom: @bottom;
+  width: @width;
+  height: @height;
+}
+
+.MIXIN_btn(@btn-height:32px, @radius:50px, @fontsize:14px) {
+  background-color: @color_main;
+  color: #fff;
+  height: @btn-height;
+  line-height: @btn-height;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 5px;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  font-size: @fontsize;
+  .MIXIN_radius(@radius);
+
+  &.touch,
+  &:hover {
+    background-color: @color_deep;
+  }
+}
+
+.MIXIN_background-color(@color, @color2, @deg:left) {
+  background-color: @color;
+  background-image: linear-gradient(@deg, @color, @color2);
+}

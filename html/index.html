@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+	<!-- 上述3个meta标签*必须*放在最前面 -->
+	<meta name="renderer" content="webkit">
+	<title>冠融科技 - 专注而专业</title>
+	<link rel="shortcut icon" href="../image/logo/ico.ico" type="image/x-icon">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="../script/_html5shiv-3.7.2.js"></script>
+			<script src="../script/_respond-1.4.2.js"></script>
+	<![endif]-->
+	<!-- stylesheet always -->
+	<!-- normalize -->
+	<link href="../style/_normalize-7.0.0.min.css" rel="stylesheet">
+	<!-- bootstrap -->
+	<link href="../style/_bootstrap-3.3.7.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="../style/_font-awesome-4.7.0.min.css" rel="stylesheet">
+	<!-- animate -->
+	<link href="../style/_animate-3.5.2.min.css" rel="stylesheet">
+	<!-- swiper -->
+	<link href="../style/_swiper-4.0.5.min.css" rel="stylesheet">
+	<!-- base -->
+	<link href="../style/base.css" rel="stylesheet">
+	<!-- style -->
+	<link href="../style/style.css" rel="stylesheet">
+	<!-- nav -->
+	<link href="../style/nav.css" rel="stylesheet">
+	<!-- footer -->
+	<link href="../style/footer.css" rel="stylesheet">
+
+	<!-- stylesheet for index -->
+	<!-- index -->
+	<link href="../style/index.css" rel="stylesheet">
+	<!-- products -->
+	<link href="../style/products.css" rel="stylesheet">
+	<!-- news -->
+	<link href="../style/news.css" rel="stylesheet">
+	<!-- owl.carousel -->
+	<link href="../style/_owl.carousel.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<nav class="nav_main animated fadeInDown" v-bind:class="{fixed:nav_fixed || nav_focus>1}">
+			<div class="container">
+				<div class="logo"><a href="index.html"></a></div>
+				<!-- end .logo -->
+				<div class="meun">
+					<a class="btn-bars visible-xs-block visible-sm-block" v-on:click="navDropdown"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					<ul class="animated" v-bind:class="{active:nav_dropdown,fadeInDown:nav_dropdown}">
+						<li><a v-bind:class="{active:nav_focus==1}" href="index.html">首页</a></li>
+						<li>
+							<a v-bind:class="{active:nav_focus==2}" href="products.html">产品中心 <i class="fa fa-caret-down hidden-xs hidden-sm" aria-hidden="true"></i></a>
+							<ul class="dropdownMenu hidden-xs hidden-sm">
+								<div class="triangle-up hidden-xs hidden-sm"></div>
+								<li><a href="#miao_products_01">外汇多边清算(交易所)系统</a></li>
+								<li><a href="#miao_products_02">外汇跨平台跟单系统</a></li>
+								<li><a href="#">外汇跨平台多级佣金结算系统</a></li>
+								<li><a href="#">外汇跨平台交易大赛</a></li>
+								<li><a href="#">外汇后台风控系统</a></li>
+								<li><a href="#">外汇跨平台API接口</a></li>
+							</ul>
+						</li>
+						<li><a v-bind:class="{active:nav_focus==3}" href="plan.html">解决方案</a></li>
+						<li><a href="http://ib.gzgrit.com/">IB扶持</a></li>
+						<li><a v-bind:class="{active:nav_focus==4}" href="news.html">新闻资讯</a></li>
+						<li><a v-bind:class="{active:nav_focus==5}" href="contact.html">联系我们</a></li>
+						<div class="clr"></div>
+						<a class="btn-close visible-xs-block visible-sm-block" v-on:click="navDropdown"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+					</ul>
+				</div>
+				<!-- end .meun -->
+				<div class="clr"></div>
+			</div>
+			<!-- end .container -->
+		</nav>
+		<!-- end .nav_main -->
+	</header>
+	<!-- end header -->
+	<section class="banner-index home">
+		<div class="bg" style="background-image:url(../image/banner/banner_index.jpg)"></div>
+		<div class="logo wow animated fadeInRight" data-wow-duration="0.6s" data-wow-delay="0.6s"></div>
+		<div class="text" v-bind:style="{bottom:textBottom+'%'}">
+			<h1 class="wow animated fadeInLeft" data-wow-delay="0.9s">冠融科技，专注而专业</h1>
+			<h3 class="wow animated fadeInRight" data-wow-delay="1.2s">外汇平台搭建一站式服务提供商</h3>
+			<h5 class="wow animated fadeInLeft" data-wow-delay="1.5s">提供MT4外汇平台搭建、CRM管理系统、网站建设、海外公司注册、牌照监管、风控系统、MT4服务器托管和出租等</h5>
+		</div>
+	</section>
+	<!-- end .banner-index -->
+	<main>
+		<section class="advantage-index home">
+			<div class="container">
+				<div class="title wow animated fadeIn">
+					<h3 class="text-right">ADVANTAGE</h3>
+					<h3 class="text-left">我们的优势</h3>
+					<hr>
+				</div>
+				<!-- end .title -->
+				<div class="content owl-carousel">
+					<div class="items wow animated fadeIn">
+						<span class="icon-focus"></span>
+						<h3>专注</h3>
+						<h5>FOCUS</h5>
+						<h6>5年MT4开发经验</h6>
+					</div>
+					<div class="items wow animated fadeIn" data-wow-delay="0.3s">
+						<span class="icon-specially"></span>
+						<h3>专业</h3>
+						<h5>SPECIALLY</h5>
+						<h6>专做基于MT4系统开发</h6>
+					</div>
+					<div class="items wow animated fadeIn" data-wow-delay="0.6s">
+						<span class="icon-outstanding"></span>
+						<h3>卓越</h3>
+						<h5>OUTSTANDING</h5>
+						<h6>技术领先国际水平</h6>
+					</div>
+					<div class="items wow animated fadeIn" data-wow-delay="0.9s">
+						<span class="icon-trust"></span>
+						<h3>信赖</h3>
+						<h5>TRUST</h5>
+						<h6>客户遍布全球各地</h6>
+					</div>
+				</div>
+				<!-- end .content -->
+			</div>
+			<!-- end .container -->
+		</section>
+		<!-- end .advantage-index -->
+		<section class="products-index home">
+			<div class="container">
+				<div class="title wow animated fadeIn">
+					<h3 class="text-right">PRODUCTS</h3>
+					<h3 class="text-left">我们的产品</h3>
+					<hr>
+				</div>
+				<!-- end .title -->
+				<div class="content">
+					<div class="items right" id="miao_products_01">
+						<div class="bg wow animated fadeIn hidden-sm hidden-xs" style="background-image:url(../image/index/products-bg-01@3x.jpg)"></div>
+						<div class="pc wow animated fadeInLeft hidden-sm hidden-xs">
+							<div style="background-image:url(../image/index/products-01.jpg)">
+								<div class="mask">
+									<a href="">立即体验</a>
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<h3 class="wow animated fadeInRight">外汇多边清算(交易所)系统</h3>
+							<hr class="wow animated fadeInRight">
+							<h5 class="wow animated fadeInRight" data-wow-delay="0.3s">外汇多边清算(交易所)系统是基于MT4交易软件开发，具有多边清算功能的外汇后台管理系统，除此之外还自带后台风控系统和多级返佣系统等，是一套功能齐全超级CRM系统。</h5>
+							<div class="bt wow animated fadeIn" data-wow-delay="0.5s">
+								<a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i> 立即体验</a>
+								<a href="#" class="chack">查看详细</a>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<!-- end .items -->
+					<hr>
+					<div class="items left" id="miao_products_02">
+						<div class="bg wow animated fadeIn hidden-sm hidden-xs" style="background-image:url(../image/index/products-bg-02@3x.jpg)"></div>
+						<div class="pc wow animated fadeInRight hidden-sm hidden-xs">
+							<div style="background-image:url(../image/index/products-02.jpg)">
+								<div class="mask">
+									<a href="">立即体验</a>
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<h3 class="wow animated fadeInLeft">外汇跨平台跟单系统</h3>
+							<hr class="wow animated fadeInLeft">
+							<h5 class="wow animated fadeInLeft" data-wow-delay="0.3s">国际最先进的跨平台跟单系统，支持全球所有使用MT4交易软件的经纪商，不需要经纪商开放任何权限，不需要API接口，不需要EA插件，不需要打开MT4终端，不需要VPS服务器挂机。又细分为5个版本：多账户管理版本、代理商（IB）版本、资管版本、多级佣金结算版本、交易大赛版本。</h5>
+							<div class="bt wow animated fadeIn" data-wow-delay="0.5s">
+								<a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i> 立即体验</a>
+								<a href="#" class="chack">查看详细</a>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<!-- end .items -->
+					<hr>
+					<!-- <div class="items right" id="miao_products_03">
+						<div class="bg wow animated fadeIn hidden-sm hidden-xs" style="background-image:url(../image/index/products-bg-01@3x.jpg)"></div>
+						<div class="pc wow animated fadeInLeft hidden-sm hidden-xs">
+							<div style="background-image:url(../image/index/products-03.jpg)">
+								<div class="mask">
+									<a href="">立即体验</a>
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<h3 class="wow animated fadeInRight">外汇跨平台多级佣金结算系统</h3>
+							<hr class="wow animated fadeInRight">
+							<h5 class="wow animated fadeInRight" data-wow-delay="0.3s">支持所有MT4交易平台的一套跨平台多级佣金自动结算系统，可任意设置返佣级数和各级佣金参数，佣金设置非常灵活，可以针对不同平台和不同的产品设置不同的佣金。不需要经纪商开放任何权限，绑定MT4账号即可完成佣金自动统计。不仅能有效的提高IB佣金统计效率，节约人工成员，还能帮助解决客户开发难等问题。</h5>
+							<div class="bt wow animated fadeIn" data-wow-delay="0.5s">
+								<a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i> 立即体验</a>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div> -->
+					<!-- end .items -->
+					<!-- <hr> -->
+					<!-- <div class="items left" id="miao_products_04">
+						<div class="bg wow animated fadeIn hidden-sm hidden-xs" style="background-image:url(../image/index/products-bg-02@3x.jpg)"></div>
+						<div class="pc wow animated fadeInRight hidden-sm hidden-xs">
+							<div style="background-image:url(../image/index/products-04.jpg)">
+								<div class="mask">
+									<a href="">立即体验</a>
+								</div>
+							</div>
+						</div>
+						<div class="text">
+							<h3 class="wow animated fadeInLeft">外汇跨平台API接口</h3>
+							<hr class="wow animated fadeInLeft">
+							<h5 class="wow animated fadeInLeft" data-wow-delay="0.3s">跨平台多账号交易接口是将 MT4 交易通道以 API 的方式聚合在一起，帮助开发商在各经纪商不提供 manager 后台账号、无须 EA 插件的情况下，也能轻松接入不同的MT4交易平台，完成登录、交易和订单查询的功能，真正实现跨平台交易，减少巨额的人工成本和硬件成本。</h5>
+							<div class="bt wow animated fadeIn" data-wow-delay="0.5s">
+								<a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i> 立即体验</a>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div> -->
+					<!-- end .items -->
+					<!-- <hr> -->
+					<a href="products.html" class="btn-products-more">查看更多产品</a>
+				</div>
+				<!-- end .content -->
+			</div>
+			<!-- end .container -->
+		</section>
+		<!-- end . products-index -->
+
+		<section class="news">
+			<div class="container">
+				<div class="container_news animated fadeInUp">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="container_news_img container_swiper_news">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><span style="background-image:url(http://www.autofx.cn/ImgUpload/20170920/18272706255064407.jpg)"></span></div>
+									<div class="swiper-slide"><span style="background-image:url(http://www.autofx.cn/ImgUpload/20170920/18272706255064407.jpg)"></span></div>
+									<div class="swiper-slide"><span style="background-image:url(http://www.autofx.cn/ImgUpload/20170920/18272706255064407.jpg)"></span></div>
+								</div>
+								<!-- end .swiper-wrapper -->
+								<div class="pagination_swiper"></div>
+							</div>
+							<!-- end .container_news_img -->
+						</div>
+						<div class="col-md-7">
+							<div class="container_news_list">
+								<ul class="list">
+									<li><a href="#" class="news"><i>新闻</i>我们上电视了!本周每晚本周每晚本周每晚本周每晚本周每晚本周每晚<b>2017-10-18</b></a></li>
+									<li><a href="#" class="public"><i>公告</i>我们上电视了!本周每晚<b>2017-10-18</b></a></li>
+									<li><a href="#" class="news"><i>新闻</i>我们上电视了!本周每晚本周每晚本周每晚本周每晚本周每晚本周每晚<b>2017-10-18</b></a></li>
+									<li><a href="#" class="public"><i>公告</i>我们上电视了!本周每晚<b>2017-10-18</b></a></li>
+									<li><a href="#" class="news"><i>新闻</i>我们上电视了!本周每晚本周每晚本周每晚本周每晚本周每晚本周每晚<b>2017-10-18</b></a></li>
+									<li><a href="#" class="public"><i>公告</i>我们上电视了!本周每晚<b>2017-10-18</b></a></li>
+								</ul>
+								<a class="more">MORE</a>
+							</div>
+							<!-- end .container_news_list -->
+						</div>
+					</div>
+					<!-- end .row -->
+				</div>
+				<!-- end .container_news -->
+			</div>
+			<!-- end .container -->
+		</section>
+		<!-- end .news -->
+
+		<section class="link-index home">
+			<div class="container">
+				<div class="title wow animated fadeIn">
+					<h3 class="text-right">LINK</h3>
+					<h3 class="text-left">友情链接</h3>
+					<hr>
+				</div>
+				<!-- end .title -->
+			</div>
+			<!-- end .container -->
+
+			<div class="link swiper-container">
+				<div class="container-link swiper-wrapper">
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/vantagefx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/aetos.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/atfx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/ausforex.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/avatrade.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/blackwell.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/BMFN.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/C7.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/capstone.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/city.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/dals.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/Delta.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/forexClub.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/FORMAX.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/FP.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/fxphc.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/goMarket.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/honFx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/huge.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/IFM.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/j2t.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/juno.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/lampeFx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/longasia.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/mdf.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/midas.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/origin.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/oxdfx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/pgwg.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/rinfx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/rusdav.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/tahoe.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/TBC.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/temple-fx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/TRI.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/ubankfx.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/usg.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/weTrade.png);" title="万致FX">万致FX</a></div>
+					<div class="items swiper-slide"><a href="#" style="background-image:url(../image/link/xcoq.png);" title="万致FX">万致FX</a></div>
+				</div>
+			</div>
+			<!-- end .link -->
+		</section>
+		<!-- end .link-index -->
+
+		<section class="commer">
+			<div class="container">
+				<h3>冠融科技 - IB扶持计划</h3>
+				<a href="http://ib.gzgrit.com/">点击查看详情</a>
+			</div>
+		</section>
+		<!-- end .IBhelp -->
+	</main>
+	<!-- end main -->
+	<footer class="footer">
+		<div class="container">
+			<div class="logo hidden-xs"></div>
+			<nav class="nav_footer hidden-xs">
+				<ul>
+					<h4>产品中心</h4>
+					<li><a href="#">外汇多边清算(交易所)系统</a></li>
+					<li><a href="#">外汇跨平台跟单系统</a></li>
+					<li><a href="#">外汇跨平台多级佣金结算系统</a></li>
+					<li><a href="#">外汇跨平台交易大赛</a></li>
+					<li><a href="#">外汇后台风控系统</a></li>
+					<li><a href="#">外汇跨平台API接口</a></li>
+				</ul>
+				<ul>
+					<h4>解决方案</h4>
+					<li><a href="#">工作室</a></li>
+					<li><a href="#">中小型代理商</a></li>
+					<li><a href="#">大型代理商</a></li>
+					<li><a href="#">经纪商</a></li>
+				</ul>
+				<ul>
+					<h4>冠融科技</h4>
+					<li><a href="#">IB扶持计划</a></li>
+					<li><a href="#">新闻资讯</a></li>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">招贤纳士</a></li>
+				</ul>
+			</nav>
+			<div class="qrcode">
+				<img src="../image/public/wechat_qrcode.png"></i>
+				<span>关注冠融科技微信公众号</span>
+			</div>
+		</div>
+		<!-- end container -->
+		<div class="copyright">
+			<div class="container">
+				Copyright ©2016-2017 All Rights Reserved 版权所有 广州冠融信息科技有限公司 粤ICP备16004476号-1
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
+	<!-- JavaScript always -->
+	<!-- JQuery -->
+	<script src="../script/_jquery-3.2.1.min.js"></script>
+	<!-- vue -->
+	<script src="../script/_vue-2.5.4.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../script/_bootstrap-3.3.7.min.js"></script>
+	<!-- swiper -->
+	<script src="../script/_swiper-4.0.5.min.js"></script>
+	<!-- wow -->
+	<script src="../script/_wow-1.1.3.min.js"></script>
+	<!-- base -->
+	<script src="../script/base.js"></script>
+
+	<!-- JavaScript for index -->
+	<!-- owl.carousel -->
+	<script src="../script/_jquery.owl.carousel-2.2.1.min.js"></script>
+
+	<script>
+		header._data.nav_focus = 1;
+		var banner = new Vue({
+			el: '.banner-index',
+			data: {
+				textBottom: 50,
+			},
+			methods: {
+				bannerScroll() {
+					var winH = document.body.clientHeight;
+					var banner_scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+					if (banner_scrollTop < winH) {
+						this.textBottom = (0.5 - banner_scrollTop / 2 / winH) * 100;
+					}
+				}, //end bannerScroll
+			},
+			mounted() {
+				window.addEventListener('scroll', this.bannerScroll)
+			},
+		})
+
+		var swiper = new Swiper('.swiper-container', {
+			freeMode: true,
+			slidesPerView: 'auto',
+			slidesPerColumn: 3,
+			spaceBetween: 0,
+			grabCursor: true,
+			autoplay: true,
+		});
+
+
+		$(document).ready(function() {
+			$('.owl-carousel').owlCarousel({
+				items: 1,
+				margin: 0,
+				center: true,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				responsive: {
+					992: {
+						items: 4,
+						center: false,
+						loop: false,
+					},
+					768: {
+						items: 2,
+						center: false,
+					}
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

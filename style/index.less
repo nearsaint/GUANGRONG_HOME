@@ -1,0 +1,239 @@
+@charset 'UTF-8';
+/*
+ * name: 'index.less';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1205';
+ */
+@import 'baseLess';
+
+section.banner-index {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  color: #fff;
+
+  > .bg {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    .MIXIN_background-image(@size: cover);
+  }
+
+  > .text {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 680px;
+    max-width: 100%;
+    transform: translate3d(-50%, 50%, 0);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+
+    > h1 {
+      font-size: 62px;
+      margin-bottom: 20px;
+    }
+
+    > h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    > h5 {
+      font-size: 16px;
+      line-height: 1.8em;
+    }
+  }
+  //end .text
+
+  > .logo {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width: 100%;
+    height: calc(~"100% + 80px");
+    .MIXIN_background-image(url(../image/logo/logo_bg_w@1x.png),contain,left center);
+  }
+}
+@media (max-width: 992px) {
+  section.banner-index {
+    min-height: 100%;
+
+    > .text {
+      > h1 {
+        font-size: 42px;
+      }
+
+      > h3 {
+        font-size: 28px;
+      }
+
+      > h5 {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+//end @media (max-width: 992px)
+@media (max-width: 768px) {
+  section.banner-index {
+    min-height: 100%;
+
+    > .text {
+      > h1 {
+        font-size: 28px;
+      }
+
+      > h3 {
+        font-size: 18px;
+      }
+
+      > h5 {
+        font-size: 14px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+//end @media (max-width: 768px)
+//end banner_index
+section.home div.title {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+
+  > h3 {
+    font-size: 32px;
+    line-height: 40px;
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+  }
+
+  > hr {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    margin: 0;
+    border: none;
+    background-color: @color_main;
+  }
+}
+@media (max-width: 768px) {
+  section.home div.title {
+    > h3 {
+      text-align: center !important;
+      display: block;
+      width: auto;
+    }
+
+    > hr {
+      display: none;
+    }
+  }
+}
+
+section.advantage-index {
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0 100px;
+  color: #fff;
+  background-color: #222;
+
+  div.content {
+    .owl-stage-outer {
+      overflow: visible !important;
+    }
+
+    div.owl-dots {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      > .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+
+        span {
+          display: block;
+          width: 13px;
+          height: 13px;
+          border: 2px solid #fff;
+          background: #fff;
+          .MIXIN_radius();
+        }
+
+        &.active > span {
+          background: @color_main;
+        }
+      }
+    }
+
+    div.items {
+      position: relative;
+      padding: 160px 10px 0;
+      text-align: center;
+
+      > h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      > h5 {
+        font-size: 18px;
+        font-weight: 200;
+        margin-bottom: 20px;
+      }
+
+      > h6 {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      > span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: @length-icon_advantage;
+        height: @length-icon_advantage;
+        margin-left: -(@length-icon_advantage/2);
+        @length-icon_advantage: 120px;
+        .MIXIN_background-image();
+      }
+
+      > span.icon-focus {
+        background-image: url("../image/index/icon-focus.png");
+      }
+
+      > span.icon-specially {
+        background-image: url("../image/index/icon-specially.png");
+      }
+
+      > span.icon-outstanding {
+        background-image: url("../image/index/icon-outstanding.png");
+      }
+
+      > span.icon-trust {
+        background-image: url("../image/index/icon-trust.png");
+      }
+    }
+  }
+  //end .content
+}
+//end .advantage-index
+
+section.link-index{
+  background: #fff;
+  padding: 40px 0;
+}

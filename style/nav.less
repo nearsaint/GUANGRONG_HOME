@@ -1,0 +1,209 @@
+@charset 'UTF-8';
+/*
+ * name: 'nav.less';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1201';
+ */
+@import 'baseLess';
+
+nav.nav_main {
+  @navHeigh: 120px; //导航条初始高度
+  @navLineHight: 40px; //导航条文字行高
+  .MIXIN_mask(fixed,@height:@navHeigh);
+  .MIXIN_transition(height .3s);
+  .MIXIN_transition(background .3s);
+  z-index: 900;
+
+  div.container {
+    position: relative;
+    height: 100%;
+
+    .logo {
+      width: 200px;
+      height: 100%;
+      float: left;
+      .MIXIN_background-image(url(../image/logo/logo-w@3x.png));
+
+      > a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    //end .logo
+    .meun {
+      float: right;
+      > ul > li {
+        margin: 0 2px;
+        float: left;
+
+        > a {
+          line-height: @navLineHight;
+          display: block;
+          height: @navLineHight;
+          margin: ((@navHeigh - @navLineHight)/2) 0;
+          padding: 0 20px;
+          color: #f5f5f5;
+          .MIXIN_radius(50px);
+
+          &.touch,
+          &:hover {
+            color: #fff;
+            background: rgba(0,0,0,0.1);
+          }
+          //:hover .touch
+          &.active {
+            color: #fff;
+            background: @color_main;
+          }
+          //.active
+        }
+        //end a
+      }
+      // end li
+      > a.btn-bars {
+        display: none;
+      }
+    }
+    //end .meun
+  }
+  //end .container
+  &.fixed {
+    @navHeigh: 60px;
+    height: @navHeigh;
+    background: #fff;
+
+    div.container .logo {
+      width: 160px;
+      .MIXIN_background-image(url(../image/logo/logo@3x.png));
+    }
+
+    div.container .meun > a.btn-bars {
+      margin: (@navHeigh - @navLineHight*2)/2 0;
+      color: @color_main;
+    }
+
+    div.container .meun > ul > li > a {
+      margin: ((@navHeigh - @navLineHight)/2) 0;
+      color: #999;
+
+      &.touch,
+      &:hover {
+        color: #333;
+      }
+
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+  //end nav_main.fixed
+}
+//end .nav_main
+@media (max-width: 992px) {
+  nav.nav_main {
+    @navHeigh: 60px; //导航条初始高度
+    @navLineHight: 40px; //导航条文字行高
+    height: @navHeigh;
+
+    div.container {
+      .logo {
+        width: 160px;
+        .MIXIN_background-image(url(../image/logo/logo-w@3x.png));
+      }
+      //end .logo
+      .meun {
+        float: right;
+        > a.btn-bars {
+          font-size: 28px;
+          line-height: @navLineHight;
+          display: block;
+          width: @navLineHight;
+          height: @navLineHight;
+          margin: (@navHeigh - @navLineHight)/2 0;
+          text-align: center;
+          color: #fff;
+
+          &.touch {
+            color: @color_deep;
+          }
+        }
+        > ul {
+          .MIXIN_mask(fixed);
+          z-index: 999;
+          padding: 40px;
+          height: 100%;
+          background-color: rgba(0,0,0,.9);
+          display: none;
+          &.active{
+            display: block;
+          }
+          > li {
+            height: 65px;
+            width: 100%;
+            padding: 20px;
+            > a {
+              display: block;
+              padding: 0 20px;
+              margin: 0;
+              text-align: center;
+              color: #fff ;
+
+              &.touch,
+              &:hover {
+                font-size: 24px;
+              }
+              //:hover .touch
+              &.active {
+                font-size: 26px;
+                background: none;
+                color: @color_light;
+              }
+              //.active
+            }
+            //end a
+          }
+          // end li
+          >a.btn-close{
+            font-size: 50px;
+            line-height: 60px;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-left: -30px;
+            text-align: center;
+            color: #999;
+            &.touch{
+              font-size: 56px;
+              color: #ccc;
+            }
+          }//end a.btn-close
+        }
+        // end ul
+      }
+      //end .meun
+    }
+    //end .container
+    &.fixed {
+      @navHeigh: 60px;
+      height: @navHeigh;
+      background: #fff;
+
+      div.container .logo {
+        .MIXIN_background-image(url(../image/logo/logo@3x.png));
+      }
+
+      div.container .meun > a.btn-bars {
+        margin: (@navHeigh - @navLineHight)/2 0;
+        color: @color_main;
+      }
+    }
+    //end nav_main.fixed
+  }
+  //end .nav_main
+}
+//end @media (max-width: 992px)

@@ -1,0 +1,225 @@
+@charset 'UTF-8';
+/*
+ * name: 'products.less';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1205';
+ */
+section.products-index {
+  padding: 40px 0 0;
+  background-color: #fff;
+}
+@media (max-width: 992px) {
+  section.products-index {
+    background-color: #f5f5f5;
+  }
+}
+section.products-index .content {
+  padding: 20px 0;
+}
+section.products-index .content > div.items {
+  padding: 40px;
+  margin-bottom: 20px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  border-radius: 10px;
+}
+section.products-index .content > div.items:hover {
+  box-shadow: 0 0 18px #ccc;
+}
+section.products-index .content > div.items > div.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-image: null;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.products-index .content > div.items.left .bg {
+  right: 0;
+}
+section.products-index .content > div.items.right .bg {
+  left: 0;
+}
+section.products-index .content > div.items > div.pc {
+  position: absolute;
+  top: 50%;
+  height: 307px;
+  width: 525px;
+  margin-top: -153.5px;
+  background-image: url(../image/index/pc@3x.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.products-index .content > div.items > div.pc > div {
+  display: block;
+  height: 252px;
+  width: 402px;
+  position: absolute;
+  z-index: 1;
+  top: 17px;
+  left: 61px;
+  background-image: null;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.products-index .content > div.items > div.pc > div > div.mask {
+  visibility: hidden;
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section.products-index .content > div.items > div.pc > div > div.mask > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #00b7ee;
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 5px;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: all 0.3s;
+}
+section.products-index .content > div.items > div.pc > div > div.mask > a.touch,
+section.products-index .content > div.items > div.pc > div > div.mask > a:hover {
+  background-color: #0061ae;
+}
+section.products-index .content > div.items > div.pc > div:hover > div.mask {
+  visibility: visible;
+}
+section.products-index .content > div.items > div.pc > div:hover > div.mask > a {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+section.products-index .content > div.items.left .pc {
+  left: 50%;
+}
+section.products-index .content > div.items.right .pc {
+  right: 50%;
+}
+section.products-index .content > div.items.right .text {
+  float: right;
+  text-align: right;
+}
+section.products-index .content > div.items.right .text .bt {
+  right: 0;
+}
+section.products-index .content > div.items.right .text .bt a {
+  float: right;
+}
+section.products-index .content > div.items.left .text {
+  float: left;
+  text-align: left;
+}
+section.products-index .content > div.items.left .text .bt {
+  left: 0;
+}
+section.products-index .content > div.items.left .text .bt a {
+  float: left;
+}
+section.products-index .content > div.items > div.text {
+  min-height: 380px;
+  width: 50%;
+  position: relative;
+  padding-bottom: 82px;
+}
+section.products-index .content > div.items > div.text > h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #00b7ee;
+}
+section.products-index .content > div.items > div.text > hr {
+  display: inline-block;
+  width: 200px;
+  margin: 0 0 30px;
+  border: 2px solid #00b7ee;
+}
+section.products-index .content > div.items > div.text > h5 {
+  font-size: 16px;
+  line-height: 2em;
+}
+section.products-index .content > div.items > div.text > .bt {
+  position: absolute;
+  bottom: 0;
+}
+section.products-index .content > div.items > div.text > .bt > a {
+  background-color: #00b7ee;
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 5px;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+}
+section.products-index .content > div.items > div.text > .bt > a.touch,
+section.products-index .content > div.items > div.text > .bt > a:hover {
+  background-color: #0061ae;
+}
+section.products-index .content > div.items > div.text > .bt > a.chack {
+  background-color: #666;
+}
+section.products-index .content > div.items > div.text > .bt > a.chack.touch,
+section.products-index .content > div.items > div.text > .bt > a.chack:hover {
+  background-color: #000;
+}
+section.products-index .content > .btn-products-more {
+  background-color: #00b7ee;
+  color: #fff;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 5px;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+section.products-index .content > .btn-products-more.touch,
+section.products-index .content > .btn-products-more:hover {
+  background-color: #0061ae;
+}
+@media (max-width: 992px) {
+  section.products-index .content > .items > .text {
+    width: 100% !important;
+    min-height: auto !important;
+    text-align: left !important;
+  }
+  section.products-index .content > .items > .text .bt {
+    left: auto !important;
+    right: 0;
+  }
+}

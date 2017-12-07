@@ -1,0 +1,299 @@
+@charset 'UTF-8';
+/*
+ * name: 'index.less';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1205';
+ */
+@import 'base_scss';
+
+section.banner-index {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  @include square(100%,100%);
+  min-height: 640px;
+  color: #fff;
+
+  > .bg {
+    @include position(0,0,0,0,fixed);
+    z-index: -1;
+    @include square(100%,100%);
+    @include background-image($size: cover);
+  }
+
+  > .text {
+    @include position($bottom: 50%, $left:50%);
+    width: 680px;
+    max-width: 100%;
+    @include transform(translate3d(-50%, 50%, 0));
+    text-align: center;
+    @include text-shadow(0 0 10px rgba(0,0,0,.5));
+
+    > h1 {
+      font-size: 62px;
+      margin-bottom: 20px;
+    }
+
+    > h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    > h5 {
+      font-size: 16px;
+      line-height: 1.8em;
+    }
+  }
+  //end .text
+
+  > .logo {
+    @include position(-40px, 50%);
+    @include square(calc(100% + 80px),100%);
+    @include background-image(url(../image/logo/logo_bg_w@1x.png),contain,left center);
+  }
+}
+@media (max-width: 992px) {
+  section.banner-index {
+    min-height: 100%;
+
+    > .text {
+      > h1 {
+        font-size: 42px;
+      }
+
+      > h3 {
+        font-size: 28px;
+      }
+
+      > h5 {
+        font-size: 16px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+//end @media (max-width: 992px)
+@media (max-width: 768px) {
+  section.banner-index {
+    min-height: 100%;
+
+    > .text {
+      > h1 {
+        font-size: 28px;
+      }
+
+      > h3 {
+        font-size: 18px;
+      }
+
+      > h5 {
+        font-size: 14px;
+        padding: 0 20px;
+      }
+    }
+      > .logo {
+        @include position(0, 13%);
+        @include square(calc(120% + 80px),120%);
+      }
+  }
+}
+//end @media (max-width: 768px)
+//end banner_index
+section.home div.title {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+
+  > h3 {
+    font-size: 32px;
+    line-height: 40px;
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+  }
+
+  > hr {
+    @include position(0,50%);
+    @include square(40px,2px);
+    display: inline-block;
+    margin: 0;
+    border: none;
+    background-color: $color_main;
+  }
+}
+@media (max-width: 768px) {
+  section.home div.title {
+    > h3 {
+      text-align: center !important;
+      display: block;
+      width: auto;
+    }
+
+    > hr {
+      display: none;
+    }
+  }
+}
+
+section.advantage-index {
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0 100px;
+  color: #fff;
+  background-color: #222;
+
+  div.content {
+    .owl-stage-outer {
+      overflow: visible !important;
+    }
+
+    div.owl-dots {
+      @include position($left:50%,$bottom:-60px);
+      @include transform(translateX(-50%));
+
+      > .owl-dot {
+        display: inline-block;
+        margin: 0 5px;
+
+        span {
+          display: block;
+          border: 2px solid #fff;
+          background: #fff;
+          @include square(13px,13px);
+          @include radius;
+        }
+
+        &.active > span {
+          background: $color_main;
+        }
+      }
+    }
+
+    div.items {
+      position: relative;
+      padding: 160px 10px 0;
+      text-align: center;
+
+      > h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      > h5 {
+        font-size: 18px;
+        font-weight: 200;
+        margin-bottom: 20px;
+      }
+
+      > h6 {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      > span {
+        $length-icon_advantage: 120px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: $length-icon_advantage;
+        height: $length-icon_advantage;
+        margin-left: -($length-icon_advantage/2);
+        @include background-image;
+      }
+
+      > span.icon-focus {
+        background-image: url("../image/index/icon-focus.png");
+      }
+
+      > span.icon-specially {
+        background-image: url("../image/index/icon-specially.png");
+      }
+
+      > span.icon-outstanding {
+        background-image: url("../image/index/icon-outstanding.png");
+      }
+
+      > span.icon-trust {
+        background-image: url("../image/index/icon-trust.png");
+      }
+    }
+  }
+  //end .content
+}
+//end .advantage-index
+
+section.link-index{
+  background: #fff;
+  padding: 40px 20px;
+  div.link
+  {
+      position: relative;
+      @include square(auto,auto);
+      div.container-link
+      {
+          // flex-direction: column;
+          // flex-wrap: wrap;
+          @include square(420px,auto);
+          position: relative;
+    			text-align: center;
+          -webkit-box-pack: center;
+    			-ms-flex-pack: center;
+    			-webkit-justify-content: center;
+    			justify-content: center;
+    			-webkit-box-align: center;
+    			-ms-flex-align: center;
+    			-webkit-align-items: center;
+    			align-items: center;
+          @include flex;
+          &::-webkit-scrollbar {
+              display: none;
+          }
+      }//end .container-link
+      div.items
+      {
+          @include square(100px,200px);
+          margin: 20px 40px;
+          >a{
+            display: block;
+            @include square(98%,98%);
+            text-indent: -9999em;
+            @include background-image;
+            @include grayscale;
+            margin: 1%;
+            &:hover,&.touch{
+              @include square(100%,100%);
+              @include grayscale(0);
+              margin: 0;
+            }
+          }
+      }//end .items
+  }//end div.link
+}//end section.link-index
+
+@media (max-width: 768px) {
+section.link-index{
+  div.link
+  {
+      @include square(210px,100%);
+      div.container-link
+      {
+          height: 210px;
+      }//end .container-link
+      div.items
+      {
+          @include square(60px,120px);
+          margin: 5px 10px;
+          >a{
+            @include square(90%,90%);
+            margin: 5%;
+            &:hover,&.touch{
+              @include square(100%,100%);
+              margin: 0;
+            }
+          }
+      }//end .items
+  }//end div.link
+}
+}
