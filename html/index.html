@@ -69,10 +69,19 @@
 								<li><a href="#">外汇跨平台API接口</a></li>
 							</ul>
 						</li>
-						<li><a v-bind:class="{active:nav_focus==3}" href="plan.html">解决方案</a></li>
+						<li>
+							<a v-bind:class="{active:nav_focus==3}" href="plan.html">解决方案 <i class="fa fa-caret-down hidden-xs hidden-sm" aria-hidden="true"></i></a>
+							<ul class="dropdownMenu hidden-xs hidden-sm">
+								<div class="triangle-up hidden-xs hidden-sm"></div>
+								<li><a href="#">工作室</a></li>
+								<li><a href="#">中小型代理商</a></li>
+								<li><a href="#">大型代理商</a></li>
+								<li><a href="#">经纪商</a></li>
+							</ul>
+						</li>
 						<li><a href="http://ib.gzgrit.com/">IB扶持</a></li>
 						<li><a v-bind:class="{active:nav_focus==4}" href="news.html">新闻资讯</a></li>
-						<li><a v-bind:class="{active:nav_focus==5}" href="contact.html">联系我们</a></li>
+						<li><a v-bind:class="{active:nav_focus==5}" href="contact.html">关于我们</a></li>
 						<div class="clr"></div>
 						<a class="btn-close visible-xs-block visible-sm-block" v-on:click="navDropdown"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
 					</ul>

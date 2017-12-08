@@ -26,9 +26,6 @@ section.products-index .content > div.items {
   transition: box-shadow 0.3s;
   border-radius: 10px;
 }
-section.products-index .content > div.items:hover {
-  box-shadow: 0 0 18px #ccc;
-}
 section.products-index .content > div.items > div.bg {
   position: absolute;
   top: 0;
