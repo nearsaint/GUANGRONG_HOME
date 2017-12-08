@@ -257,15 +257,12 @@ section.link-index{
           margin: 20px 40px;
           >a{
             display: block;
-            @include square(98%,98%);
+            @include square(100%,100%);
             text-indent: -9999em;
             @include background-image;
             @include grayscale;
-            margin: 1%;
             &:hover,&.touch{
-              @include square(100%,100%);
               @include grayscale(0);
-              margin: 0;
             }
           }
       }//end .items
@@ -285,14 +282,6 @@ section.link-index{
       {
           @include square(60px,120px);
           margin: 5px 10px;
-          >a{
-            @include square(90%,90%);
-            margin: 5%;
-            &:hover,&.touch{
-              @include square(100%,100%);
-              margin: 0;
-            }
-          }
       }//end .items
   }//end div.link
 }
