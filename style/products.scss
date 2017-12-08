@@ -1,0 +1,319 @@
+@charset 'UTF-8';
+/*
+ * name: 'products.scss';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1208';
+ */
+@import 'base_scss';
+
+section.products-index {
+  padding: 40px 0 0;
+  background-color: #fff;
+
+  @media (max-width: 992px) {
+    background-color: #f5f5f5;
+  }
+  .content {
+    padding: 20px 0;
+
+    > div.items {
+      padding: 40px;
+      margin-bottom: 20px;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      @include transition(box-shadow .3s);
+      @include radius;
+
+      &:hover {
+        // box-shadow: 0 0 18px #ccc;
+      }
+
+      > div.bg {
+        @include position($top:0,$bottom:0);
+        @include square(100%,50%);
+        @include background-image($size:cover);
+      }
+
+      &.left .bg {
+        right: 0;
+      }
+
+      &.right .bg {
+        left: 0;
+      }
+
+      > div.pc {
+        @include position($top:50%);
+        @include square(307px,525px);
+        margin-top: -153.5px;
+        @include background-image(url(../image/index/pc@3x.png));
+
+        > div {
+          display: block;
+          @include square(252px,402px);
+          @include position(17px,61px,$z-index: 1);
+          @include background-image;
+
+          > div.mask {
+            visibility: hidden;
+            display: block;
+            @include square(100%, 100%);
+            @include transition(all .3s);
+            background-color: rgba(0,0,0,0.5);
+
+            > a {
+              @include position(50%,50%);
+              @include transform(translateX(-50%) translateY(-50%));
+              @include btn($bg:$color_main,$hover_bg:$color_deep);
+              padding: 0 40px;
+              text-align: center;
+              visibility: hidden;
+              @include opacity(0);
+              @include transition(all 0.3s);
+            }
+          }
+
+          &:hover > div.mask {
+            visibility: visible;
+
+            > a {
+              visibility: visible;
+              @include opacity(1);
+            }
+          }
+        }
+      }
+
+      &.left .pc {
+        left: 50%;
+      }
+
+      &.right .pc {
+        right: 50%;
+      }
+
+      &.right .text {
+        float: right;
+        text-align: right;
+
+        .bt {
+          right: 0;
+
+          a {
+            float: right;
+          }
+        }
+      }
+
+      &.left .text {
+        float: left;
+        text-align: left;
+
+        .bt {
+          left: 0;
+
+          a {
+            float: left;
+          }
+        }
+      }
+
+      > div.text {
+        min-height: 380px;
+        width: 50%;
+        position: relative;
+        padding-bottom: 82px;
+
+        > h3 {
+          font-size: 32px;
+          margin-bottom: 30px;
+          color: $color_main;
+        }
+
+        > hr {
+          display: inline-block;
+          width: 200px;
+          margin: 0 0 30px;
+          border: 2px solid $color_main;
+        }
+
+        > h5 {
+          font-size: 16px;
+          line-height: 2em;
+        }
+
+        > .bt {
+          position: absolute;
+          bottom: 0;
+
+          > a {
+            @include btn($bg:$color_main,$hover_bg:$color_deep);
+            padding: 0 20px;
+            margin: 0 3px;
+
+            &.chack {
+              background-color: #666;
+              &:hover,&.touch{
+                background-color: #333;
+              }
+            }
+          }
+        }
+      }
+      //end .text
+    }
+    //end .items
+    > .btn-products-more {
+      @include btn($height:42px,$bg:$color_main,$hover_bg:$color_deep);
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+  }
+  //end .content
+}
+// end .products-index
+@media (max-width: 992px) {
+  section.products-index {
+    .content > .items > .text {
+      width: 100% !important;
+      min-height: auto !important;
+      text-align: left !important;
+
+      .bt {
+        left: auto !important;
+        right: 0;
+      }
+    }
+  }
+  // end .products-index
+}
+
+
+section.products-content{
+  padding: 60px 0;
+  text-align: center;
+  line-height: 1.5em;
+  div.pc {
+    position: relative;
+    @include square(307px,525px);
+    margin: 0 auto 60px;
+    @include background-image(url(../image/index/pc@3x.png));
+    > div {
+      display: block;
+      @include square(252px,402px);
+      @include position(17px,61px,$z-index: 1);
+      @include background-image;
+      > div.mask {
+        visibility: hidden;
+        display: block;
+        @include square(100%, 100%);
+        @include transition(all .3s);
+        background-color: rgba(0,0,0,0.5);
+        > a {
+          @include position(50%,50%);
+          @include transform(translateX(-50%) translateY(-50%));
+          @include btn($bg:$color_main,$hover_bg:$color_deep);
+          padding: 0 40px;
+          text-align: center;
+          visibility: hidden;
+          @include opacity(0);
+          @include transition(all 0.3s);
+        }
+      }
+      &:hover > div.mask {
+        visibility: visible;
+        > a {
+          visibility: visible;
+          @include opacity(1);
+        }
+      }
+    }
+  }//pc
+  >div>h1{
+    font-size: 32px;
+    color: $color_main;
+  }
+  >div>hr{
+    border-top: 4px solid $color_main;
+    width: 200px;
+    margin: 40px auto;
+  }
+  >div>h2{
+    font-size: 16px;
+    color: #666;
+    padding: 0 200px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+  }
+  >div>a{
+    @include btn($bg:$color_main,$hover_bg:$color_deep,$height: 42px);
+    padding: 0 40px;
+  }
+  >div>div.text{
+    border-top: 1px solid #ccc;
+    margin-top: 60px;
+    padding: 60px 0 0;
+    >h5{
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    >h6{
+      font-size: 16px;
+      color: #ccc;
+    }
+    >hr{
+      border-top: 1px solid $color_main;
+      width: 160px;
+      margin: 40px auto;
+    }
+    img{
+      max-height: 500px;
+      width: auto;
+    }
+    >ul>li{
+      font-size: 16px;
+      margin: 20px auto;
+      >div{
+        display: inline-block;
+        background-color: $color_main;
+        color: #fff;
+        line-height: 42px;
+        @include radius(20px);
+        padding: 0 20px 0 50px;
+        position: relative;
+        text-align: left;
+        >i{
+          @include position(1px,1px);
+          display: block;
+          @include square(40px,40px);
+          background-color: #fff;
+          margin-right: 10px;
+          color: $color_main;
+          @include radius(20px);
+          line-height: 40px;
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+section.products-content{
+  .pc{
+    display: none;
+  }
+
+    >div>h1{
+      font-size: 26px;
+    }
+  >div>h2{
+    padding: 0 20px;
+  }
+}
+}

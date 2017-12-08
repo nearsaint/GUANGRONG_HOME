@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+/*
+ * name: 'plan.scss';
+ * for: 'GuangRong_Home';
+ * author: 'NearSaint';
+ * time: '2017.1208';
+ */
+@import 'base_scss';
+
+section.plan{
+  padding: 0;
+  ul>li{
+    border-bottom: 1px solid #ccc;
+    padding: 60px 0 40px;
+    text-align: center;
+    >h3{
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    >h4{
+      font-size: 16px;
+      color: #999;
+      font-weight: 400;
+    }
+    >hr{
+      width: 200px;
+      margin: 15px auto 40px;
+      border-top: 4px solid $color_main;
+    }
+    >div{
+      padding: 40px;
+      margin: 0 0 20px;
+      background: #f7f7f9;
+      @include radius;
+      text-align: left;
+      >h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 1.8em;
+        color: $color_main;
+      }
+      > h6{
+        font-size: 16px;
+        line-height: 1.8em;
+        color: #999;
+        >strong{
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+}

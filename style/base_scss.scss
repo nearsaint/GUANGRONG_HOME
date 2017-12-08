@@ -77,13 +77,14 @@ $color_deep: #0061ae;
          -o-background-size: $size;
             background-size: $size;
 }
-@mixin position($top: auto,$left: auto,$right:auto,$bottom:auto,$position: absolute)
+@mixin position($top: auto,$left: auto,$right:auto,$bottom:auto,$position: absolute,$z-index:auto)
 {
     position: $position;
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
+    z-index: $z-index;
 }
 @mixin text-overflow
 {
@@ -120,7 +121,6 @@ $color_deep: #0061ae;
     line-height: $height;
 
     display: inline-block;
-
     color: $color;
     border: $border;
     outline: none;

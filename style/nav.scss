@@ -65,7 +65,6 @@ nav.nav_main {
         }
         > ul.dropdownMenu{
           @include position(calc(100% - 20px),0);
-          background: #fff;
           padding: 10px 0 0;
           @include radius;
           width: auto;
@@ -74,11 +73,15 @@ nav.nav_main {
 
           > li{
               border-bottom: 1px solid #eee;
+              background: #fff;
               padding: 10px 20px;
               >a{
               display: block;
               line-height: 32px;
               color: #333;
+            }
+            &:first-of-type{
+              @include radius(10px 10px 0 0);
             }
             &:last-child{
               border: none;
@@ -95,7 +98,7 @@ nav.nav_main {
               border-right: 10px solid transparent;
               border-bottom: 10px solid #fff;
               position: absolute;
-              top: -8px;
+              top: 0;
               left: 43px;
           }
         }//end dropdownMenu
@@ -129,15 +132,25 @@ nav.nav_main {
 
     div.container .meun > ul > li{
       > ul.dropdownMenu{
-        display: none !important;
+        top: 100%;
+        >li{
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          &:first-of-type{
+            border-top: 1px solid #ccc;
+          }
+          &:last-child{
+            border-bottom: 1px solid #ccc;
+          }
+        }
+        .triangle-up {
+          display: none;
+        }
       }
     }
     div.container .meun > ul > li > a {
       margin: (($navHeigh - $navLineHight)/2) 0;
       color: #999;
-      >i{
-        display: none !important;
-      }
       &.touch,
       &:hover {
         color: #333;
