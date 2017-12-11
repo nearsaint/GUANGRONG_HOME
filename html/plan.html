@@ -55,20 +55,29 @@
 						<li><a v-bind:class="{active:nav_focus==1}" href="index.html">首页</a></li>
 						<li>
 							<a v-bind:class="{active:nav_focus==2}" href="products.html">产品中心 <i class="fa fa-caret-down hidden-xs hidden-sm" aria-hidden="true"></i></a>
-							<ul class="dropdownMenu hidden-xs hidden-sm">
+							<ul class="dropdownMenu hidden-xs hidden-sm animated fadeIn">
 								<div class="triangle-up hidden-xs hidden-sm"></div>
-								<li><a href="#miao_products_01">外汇多边清算(交易所)系统</a></li>
-								<li><a href="#miao_products_02">外汇跨平台跟单系统</a></li>
-								<li><a href="#miao_products_03">外汇跨平台多级佣金结算系统</a></li>
-								<li><a href="#">外汇跨平台交易大赛</a></li>
-								<li><a href="#">外汇后台风控系统</a></li>
-								<li><a href="#miao_products_04">外汇跨平台API接口</a></li>
+								<li><a href="products.html">外汇多边清算(交易所)系统</a></li>
+								<li><a href="products.html#miao_products_02">外汇跨平台跟单系统</a></li>
+								<li><a href="products.html#miao_products_03">外汇跨平台多级佣金结算系统</a></li>
+								<li><a href="products.html#miao_products_04">外汇跨平台交易大赛</a></li>
+								<li><a href="products.html#miao_products_05">外汇后台风控系统</a></li>
+								<li><a href="products.html#miao_products_06">外汇跨平台API接口</a></li>
 							</ul>
 						</li>
-						<li><a v-bind:class="{active:nav_focus==3}" href="plan.html">解决方案</a></li>
+						<li>
+							<a v-bind:class="{active:nav_focus==3}" href="plan.html">解决方案 <i class="fa fa-caret-down hidden-xs hidden-sm" aria-hidden="true"></i></a>
+							<ul class="dropdownMenu hidden-xs hidden-sm animated fadeIn">
+								<div class="triangle-up hidden-xs hidden-sm"></div>
+								<li><a href="plan.html">工作室</a></li>
+								<li><a href="plan.html#miao_plan_02">中小型代理商</a></li>
+								<li><a href="plan.html#miao_plan_03">大型代理商</a></li>
+								<li><a href="plan.html#miao_plan_04">经纪商</a></li>
+							</ul>
+						</li>
 						<li><a href="http://ib.gzgrit.com/">IB扶持</a></li>
 						<li><a v-bind:class="{active:nav_focus==4}" href="news.html">新闻资讯</a></li>
-						<li><a v-bind:class="{active:nav_focus==5}" href="contact.html">关于我们</a></li>
+						<li><a v-bind:class="{active:nav_focus==5}" href="about.html">关于</a></li>
 						<div class="clr"></div>
 						<a class="btn-close visible-xs-block visible-sm-block" v-on:click="navDropdown"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
 					</ul>
@@ -91,7 +100,7 @@
 		<section class="plan">
 			<div class="container">
 				<ul>
-					<li>
+					<li id="miao_plan_01">
 						<h3>工作室</h3>
 						<h4>推荐团队人数≤5人</h4>
 						<hr>
@@ -100,7 +109,7 @@
 							<h6>当团队人数≤5人时，推荐使用多账号管理系统。这种比较适合公司的内部人士用，适合资管公司。跟随方与信号方由同一人管理，它可以帮助专业的交易员实现多个账户的统筹化管理。冠融科技的跨平台多账号管理系统采用的是跨平台通信协议，无需VPS挂机，无需下载软件，使用门槛低，出入金也自由。</h6>
 						</div>
 					</li>
-					<li>
+					<li id="miao_plan_02">
 						<h3>中小型代理商</h3>
 						<h4>推荐代理商团队人数20人左右</h4>
 						<hr>
@@ -109,7 +118,7 @@
 							<h6>当团队人数在20人左右时，推荐使用冠融科技的跨平台跟单社区代理商版本+多级佣金结算系统。对于想要做大做强的代理商而言，跨平台跟单社区可以更好地帮助代理商（定制方/运营方）去进行市场拓展，提升获客率，我们给到的IB版本是按交易手数进行收费。而多级返佣系统，不仅能有效的提高IB佣金统计效率，节约人工成本，还能帮助解决客户开发难等问题。毫无疑问，跨平台跟单+跨平台多级返佣将是外汇市场营销的最佳组合模式。</h6>
 						</div>
 					</li>
-					<li>
+					<li id="miao_plan_03">
 						<h3>大型代理商</h3>
 						<h4>推荐代理商团队人数>30人</h4>
 						<hr>
@@ -122,7 +131,7 @@
 							<h6><strong>如果你拥有自己的开发团队</strong>，那么推荐使用我们的跨平台API接口。冠融科技的外汇跨平台API接口，相当于一个万能的接口，基本上可以实现跨平台跟单的全部功能，包括冠融科技目前所推出的跨平台跟单系统的五大版本，也包括六大系列产品中的账户分析展示系统、多级返佣等，这些都是可以自己开发的。</h6>
 						</div>
 					</li>
-					<li>
+					<li id="miao_plan_04">
 						<h3>经纪商</h3>
 						<h4>如果您是经纪商</h4>
 						<hr>
