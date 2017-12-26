@@ -79,7 +79,7 @@ footer.footer{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   footer.footer{
     .qrcode{
       @include position($right: 50%,$top: 0);

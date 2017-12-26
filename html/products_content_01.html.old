@@ -90,114 +90,77 @@
 		<!-- end .nav_main -->
 	</header>
 	<!-- end header -->
+	<section class="banner-content">
+		<div class="bg" style="background-image:url(../image/banner/banner_index.jpg)"></div>
+		<h5>外汇多边清算(交易所)系统</h5>
+	</section>
+	<!-- end .banner-index -->
 	<main>
 		<section class="products-content">
-			<div class="title" style="height">
-				<div class="container">
-					<h1>外汇跨平台跟单系统</h1>
-					<div class="pc wow animated fadeIn">
-						<div style="background-image:url(../image/index/products-02.jpg)">
-							<div class="mask">
-								<a href="">立即体验</a>
-							</div>
+			<div class="container">
+				<div class="pc wow animated fadeIn">
+					<div style="background-image:url(../image/index/products-01.jpg)">
+						<div class="mask">
+							<a href="">立即体验</a>
 						</div>
 					</div>
-					<!-- end .pc -->
-					<h2>国际最先进的跨平台跟单系统，支持全球所有的MT4交易软件的经纪商，不需要经纪商开放任何权限，不需要API接口，不需要EA插件，不需要打开MT4终端，不需要VPS服务器挂机。又细分为5个版本：多账户管理版本、代理商（IB）版本、资管版本、多级佣金结算版本、交易大赛版本。</h2>
-					<a href="#">立即体验</a>
 				</div>
-				<!-- end .container -->
-			</div>
-			<!-- end .title -->
-
-			<div class="mid-b content">
-				<div class="container">
-					<h5>六大领先技术</h5>
-					<h6>Six Excellent</h6>
-					<ul class="sixContent">
-						<li>
-							<div><i class="noea"></i>
-								<h5>无需EA插件</h5>
-								<h6>提高跟单效率。现在市面上绝大多数跟单系统都需要依附EA来运作。</h6>
-							</div>
-						</li>
-						<li>
-							<div><i class="novps"></i>
-								<h5>无需VPS挂机</h5>
-								<h6>降低跟单硬件成本。现在很多跟单系统都需要远程租用服务器，进行VPS挂机。成本不低，操作过程也繁琐。而且通常都会有账号限制。</h6></div>
-						</li>
-						<li>
-							<div><i class="nomt4"></i>
-								<h5>无需打开MT4终端</h5>
-								<h6>加快跟单速度。</h6></div>
-						</li>
-						<li>
-							<div><i class="noapi"></i>
-								<h5>无需API接口</h5>
-								<h6>降低经纪商服务器的安全风险。这也是我们能够做到跨平台跟单所带来的优势。</h6>
-							</div>
-						</li>
-						<li>
-							<div><i class="nono"></i>
-								<h5>无账号数量限制</h5>
-								<h6>真正意义上的跟单社区。上百上千个账号跟单都没问题。</h6></div>
-						</li>
-						<li>
-							<div><i class="nolou"></i>
-								<h5>无掉单漏单</h5>
-								<h6>降低跟单交易风险。我们的外汇跨平台跟单系统是真正能够通过实盘检验，并真正能够做到无掉单漏单。</h6></div>
-						</li>
-					</ul>
-				</div>
-				<!-- end .container -->
-			</div>
-			<div class="mid-w content">
-				<div class="container">
-					<h5>七大系统</h5>
-					<h6>Seven Systems</h6>
+				<h1>外汇多边清算（交易所）系统</h1>
+				<hr>
+				<h2>外汇多边清算（交易所）系统是基于MT4交易软件开发，具有多边清算功能的外汇后台管理系统，除此之外还自带后台风控系统和多级返佣系统等，是一套功能齐全超级CRM系统。</h2>
+				<a href="#">立即体验</a>
+				<div class="text">
+					<h5>五大角色</h5>
+					<h6>Five users</h6>
 					<hr>
-					<ul class="sevenContent">
+					<ul>
 						<li>
-							<h3>支持跨平台跟单</h3>
-							<h4>支持全球所有使用MT4交易软件的经纪商</h4>
+							<div><i>1</i>清算中心（交易所）</div>
 						</li>
 						<li>
-							<h3>支持极速跟单</h3>
-							<h4>网络正常情况下，毫秒级跟单</h4>
+							<div><i>2</i>运营中心</div>
 						</li>
 						<li>
-							<h3>支持第三方支付</h3>
-							<h4>充值自动到账，客户跟单自动扣费</h4>
+							<div><i>3</i>清算会员（特别会员、综合会员）</div>
 						</li>
 						<li>
-							<h3>支持多级佣金结算</h3>
-							<h4>灵活设置多级佣金结算体系</h4>
+							<div><i>4</i>代理商（IB、普通会员）</div>
 						</li>
 						<li>
-							<h3>支持多种收费模式</h3>
-							<h4>按交易手数收费或按盈利分成收费</h4>
-						</li>
-						<li>
-							<h3>支持交易大赛</h3>
-							<h4>跨平台交易大赛，可进行实盘或模拟盘比赛</h4>
-						</li>
-						<li>
-							<h3>支持多种终端展示</h3>
-							<h4>PC网页端、APP、微信公众号、H5页面等</h4>
+							<div><i>5</i>投资者</div>
 						</li>
 					</ul>
 				</div>
-			</div>
-
-			<div class="mid-w content">
-				<div class="container">
+				<div class="text">
+					<h5>六大功能</h5>
+					<h6>Six functions</h6>
+					<hr>
+					<ul>
+						<li>
+							<div><i>1</i>多边清算</div>
+						</li>
+						<li>
+							<div><i>2</i>后台风控（甩单,对冲）</div>
+						</li>
+						<li>
+							<div><i>3</i>多级佣金结算</div>
+						</li>
+						<li>
+							<div><i>4</i>报表统计</div>
+						</li>
+						<li>
+							<div><i>5</i>注册开户</div>
+						</li>
+						<li>
+							<div><i>6</i>出入金</div>
+						</li>
+					</ul>
+				</div>
+				<div class="text">
 					<h5>软件著作权</h5>
 					<h6>Software Copyright</h6>
 					<hr>
-					<p>该系统已经顺利通过中国版权保护中心审核，<br>获得国家版权局颁发的计算机软件著作权登记证书。</p>
-					<a class="img" href="../image/products/detail_2.jpg">
-						<img src="../image/products/detail_2.jpg" />
-					</a>
+					<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1512728286442&di=617163412a5ddb650404e858c629545f&imgtype=0&src=http%3A%2F%2Fwww.njabk.com%2Fupload%2F2015%2F07%2F24%2F1437718156020gxf7.png" />
 				</div>
 			</div>
 		</section>
