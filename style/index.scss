@@ -16,10 +16,21 @@ section.banner-index {
   color: #fff;
 
   > .bg {
-    @include position(0,0,0,0,fixed);
+    @include position(0,0,0,0,fixed,$z-index: -1);
     z-index: -1;
     @include square(100%,100%);
     @include background-image($size: cover);
+  }
+  > .mask{
+    // background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,183,238,0.5);
+    background-image: -webkit-linear-gradient(left, rgba(0,183,238,0.5), rgba(0,97,174,0.5));
+    background-image: -moz-linear-gradient(left, rgba(0,183,238,0.5), rgba(0,97,174,0.5));
+    background-image: -o-linear-gradient(left, rgba(0,183,238,0.5), rgba(0,97,174,0.5));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0,183,238,0.5)), to(rgba(0,97,174,0.5)));
+    background-image: linear-gradient(left, rgba(0,183,238,0.5), rgba(0,97,174,0.5));
+      @include position(0,0,0,0,$z-index: 0);
+      @include square(100%,100%);
   }
 
   > .text {
@@ -28,7 +39,7 @@ section.banner-index {
     max-width: 100%;
     @include transform(translate3d(-50%, 50%, 0));
     text-align: center;
-    @include text-shadow(0 0 10px rgba(0,0,0,.5));
+    @include text-shadow(0 2px 6px rgba(0,0,0,0.5));
 
     > h1 {
       font-size: 62px;
@@ -41,8 +52,9 @@ section.banner-index {
     }
 
     > h5 {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.8em;
+      font-weight: 400;
     }
   }
   //end .text

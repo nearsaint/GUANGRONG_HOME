@@ -379,10 +379,15 @@ section.products-content{
 
   ul.sixContent{
     @include flex;
+    padding: 20px 0;
     flex-wrap: nowrap;
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
+      &::-webkit-scrollbar{
+        height: 0;
+        visibility: hidden;
+      }
     >li{
       margin: 0 10px;
       width: 180px;
@@ -434,6 +439,7 @@ section.products-content{
         font-size: 14px;
         line-height: 1.5em;
         font-weight: 400;
+        color: #999;
       }
     }//end li
   }//end .sixContent
@@ -444,6 +450,10 @@ section.products-content{
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
+      &::-webkit-scrollbar{
+        height: 0;
+        visibility: hidden;
+      }
     >li{
       margin: 0 10px;
       min-width: 200px;
@@ -479,14 +489,19 @@ section.products-content{
   }
 
   ul.sevenContent{
+    &::-webkit-scrollbar{
+      height: 0;
+      visibility: hidden;
+    }
     >li{
       background: #57c7f3;
       @include radius;
-      margin: 10px auto;
+      margin: 20px auto;
       padding: 20px;
       width: 100%;
       max-width: 720px;
       color: #fff;
+      position: relative;
 
       &:nth-child(even){
       background: #0061ae;
@@ -496,6 +511,21 @@ section.products-content{
       }
       >h4{
         font-size: 16px;
+      }
+      b{
+        display: black;
+        position: absolute;
+        @include square(38px,38px);
+        @include position($right:20px,$top:15px,$z-index: 2);
+        @include background-image(url(../image/products/icon_right.png));
+      }
+      i{
+        display: black;
+        position: absolute;
+        @include square(40px,40px);
+        @include position($right:25px,$top:25px,$z-index: 1);
+        @include radius(50%);
+        background-color: #fff;
       }
     }
   }
