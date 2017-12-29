@@ -157,6 +157,63 @@ section.plan{
           }
         }
       }
+    }//end products
+
+    div.product_owl{
+      width: 100%;
+      height: 300px;
+      .owl-dots{
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%));
+        >.owl-dot{
+          @include radius(50%);
+          background-color: #999;
+          border: 2px solid #eee;
+          float: left;
+          @include square(20px,20px);
+          &.active{
+            background: $color_main;
+          }
+        }
+      }
+      .owl-item{
+        padding: 10px;
+      }
+      .items{
+        @include radius;
+        background-color: $color_main;
+        color:#fff;
+        padding: 20px;
+        min-height: 320px;
+        >h3{
+          margin-bottom: 20px;
+        }
+        >h5{
+          font-size: 14px;
+          margin-bottom: 40px;
+          line-height: 1.5em;
+          color: #eee;
+        }
+        >div.bt{
+          text-align: right;
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          height: 34px;
+          >a{
+            @include radius(50px);
+            background-color: #fff;
+            color: $color_main;
+            padding: 8px 15px;
+            margin: 0 5px;
+            &:hover{
+              background-color: $color_deep;
+              color:#fff;
+            }
+          }
+        }
+      }
     }
 
   }//end content

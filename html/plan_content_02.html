@@ -41,6 +41,8 @@
 	<link href="../style/plan.css" rel="stylesheet">
 	<!-- news -->
 	<link href="../style/news.css" rel="stylesheet">
+	<!-- owl.carousel -->
+	<link href="../style/_owl.carousel.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,14 +113,14 @@
 							<br><br> 对于想要做大做强的代理商而言，跨平台跟单社区可以更好地帮助代理商（定制方/运营方）去进行市场拓展，提升获客率，我们给到的IB版本是按交易手数进行收费，以人民币支付，客户可以通过跟单系统的后台用微信或支付宝等第三方支付软件进行充值，方便快捷。
 							<br><br> 配合多级返佣系统，不仅能有效的提高IB佣金统计效率，节约人工成本，还能帮助解决客户开发难等问题。毫无疑问，跨平台跟单+跨平台多级返佣将是外汇市场营销的最佳组合模式。
 						</p>
-						<div class="products hidden-xs hidden-sm">
-							<div class="item">
+						<div class="product_owl owl-carousel owl-carousel-1">
+							<div class="item items">
 								<h3>外汇跨平台跟单系统</h3>
 								<h5>国际最先进的跨平台跟单系统，支持全球所有的MT4交易软件的经纪商，不需要经纪商开放任何权限，不需要API接口，不需要EA插件，不需要打开MT4终端，不需要VPS服务器挂机。又细分为5个版本：多账户管理版本、代理商（IB）版本、资管版本、多级佣金结算版本、交易大赛版本。</h5>
 								<div class="bt"><a href="">查看详情</a><a href="">立即体验</a></div>
 							</div>
 
-							<div class="item">
+							<div class="item items">
 								<h3>外汇跨平台多级佣金结算系统</h3>
 								<h5>支持所有MT4交易平台的一套跨平台多级佣金自动结算系统，可任意设置返佣级数和各级佣金参数，佣金设置非常灵活，可以针对不同平台和不同的产品设置不同的佣金。不需要经纪商开放任何权限，绑定MT4账号即可完成佣金自动统计。不仅能有效的提高IB佣金统计效率，节约人工成员，还能帮助解决客户开发难等问题。</h5>
 								<div class="bt"><a href="">查看详情</a><a href="">立即体验</a></div>
@@ -235,12 +237,33 @@
 	<script src="../script/base.js"></script>
 
 	<!-- JavaScript for index -->
+	<!-- owl.carousel -->
+	<script src="../script/_jquery.owl.carousel-2.2.1.min.js"></script>
+
 
 	<script>
 		header._data.nav_focus = 3;
 
 		$(document).ready(function() {
-
+			$('.owl-carousel-1').owlCarousel({
+				items: 1,
+				margin: 0,
+				center: true,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				responsive: {
+					992: {
+						items: 2,
+						center: false,
+						loop: false,
+					},
+					768: {
+						items: 2,
+						center: false,
+					}
+				}
+			});
 		});
 	</script>
 </body>
