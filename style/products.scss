@@ -381,7 +381,7 @@ section.products-content{
     @include flex;
     padding: 20px 0;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content:center;
     overflow-x: scroll;
     overflow-y: hidden;
       &::-webkit-scrollbar{
@@ -389,8 +389,8 @@ section.products-content{
         visibility: hidden;
       }
     >li{
-      margin: 0 10px;
-      width: 180px;
+      margin: 20px 10px;
+      width: 220px;
       div>i{
         height: 130px;
         width: 130px;
@@ -430,6 +430,27 @@ section.products-content{
         &.nono{
           background-image:url(../image/products/products-excellent-nono.png);
         }
+        &.sys01{
+          background-image:url(../image/products/icon_products2_01.png);
+        }
+        &.sys02{
+          background-image:url(../image/products/icon_products2_02.png);
+        }
+        &.sys03{
+          background-image:url(../image/products/icon_products2_03.png);
+        }
+        &.sys04{
+          background-image:url(../image/products/icon_products2_04.png);
+        }
+        &.sys05{
+          background-image:url(../image/products/icon_products2_05.png);
+        }
+        &.sys06{
+          background-image:url(../image/products/icon_products2_06.png);
+        }
+        &.sys07{
+          background-image:url(../image/products/icon_products2_07.png);
+        }
       }
       h5{
         font-size: 20px;
@@ -444,6 +465,41 @@ section.products-content{
     }//end li
   }//end .sixContent
 
+  @media (max-width: 992px) {
+    ul.sixContent{
+      flex-wrap: wrap;
+      justify-content:center;
+      >li{
+        margin: 20px 0;
+        width: 50%;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  div.ts6{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar{
+      display:none;
+    }
+    >img{
+      width: 1018px;
+      height: 625px;
+    }
+  }
+
+    div.js5{
+      overflow-x: scroll;
+      overflow-y: hidden;
+      &::-webkit-scrollbar{
+        display:none;
+      }
+      >img{
+        width: 1130px;
+        height: 522px;
+      }
+    }
   ul.fiveContent{
     @include flex;
     flex-wrap: nowrap;
